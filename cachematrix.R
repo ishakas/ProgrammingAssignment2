@@ -26,7 +26,7 @@ makeCacheMatrix <- function(x = matrix()) {
     getinverse <- function () m
     
     ## build the list of object
-    list (set = set, get = get, setinverse = set inverse, getinverse = getinverse)
+    list (set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 
 
@@ -42,7 +42,7 @@ cacheSolve <- function(x, ...) {
         
         ## check if there is a matrix in the cache
         ## if it's in the cache then return the cached matrix
-        if(!isnull(m)) {
+        if(!is.null(m)) {
             message("getting cached data")
             return(m)
         }
